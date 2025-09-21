@@ -6,7 +6,7 @@ namespace Company.G02.PL.Controllers
     // MVC Controller
     public class DepartmentController : Controller
     {
-        private readonly IDepartmentReposiatory _departmentRepository;
+        private readonly IDepartmentReposiatory _departmentRepository;//NULL
 
         //ASK CLR Create Object From DepartmentReposiatory
 
