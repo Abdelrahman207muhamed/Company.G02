@@ -12,16 +12,18 @@ namespace Company.G02.BLL.Repositories
     {
         // Readonly => Can't Assign New Value 
         private  readonly CompanyDbContext _context;//Null
-      
-        public DepartmentReposiatory()
+
+        //ASK CLR Create Object From CompanyDbContext
+        public DepartmentReposiatory(CompanyDbContext context)
         {
-            _context= new CompanyDbContext();
+            _context= context;
         }
         public IEnumerable<Department> GetAll()
         {
           // using CompanyDbContext context = new CompanyDbContext();
             return _context.Departments.ToList();
         }
+       
         public Department? Get(int id)
         {
             //using CompanyDbContext context = new CompanyDbContext();
